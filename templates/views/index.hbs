@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="icon" href="/img/weather.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+</head>
+
+<body>
+    <div class="main-content">
+        {{>header}}
+        <p>Use this site to get weather</p>
+        <form>
+            <input placeholder="Location">
+            <button>Search</button>
+        </form>
+        <p id="msg1"></p>
+        <div id="msg2">
+            <div id="xyz"></div>
+            <div id="abc"></div>
+        </div>
+        <div id="wrapper">
+            <div id="msg3"></div>
+            {{!-- <div id="msg4"></div> --}}
+            <div id="msg5"></div>
+            <div id="msg6"></div>
+        </div>
+    </div>
+    {{>footer}}
+    <script src="/js/app.js"></script>
+
+</body>
+
+</html>
