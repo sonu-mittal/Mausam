@@ -26,20 +26,20 @@ app.get('', (req, res) => {
     });
 });
 
-app.get('/about', (req, res) => {
-    res.render('about', {
-        title: "About Me",
-        name: "Sonu Mittal"
-    });
-});
+// app.get('/about', (req, res) => {
+//     res.render('about', {
+//         title: "About Me",
+//         name: "Sonu Mittal"
+//     });
+// });
 
-app.get('/help', (req, res) => {
-    res.render('help', {
-        title: "Help",
-        name: "Sonu Mittal",
-        helpText: "This is help page."
-    });
-});
+// app.get('/help', (req, res) => {
+//     res.render('help', {
+//         title: "Help",
+//         name: "Sonu Mittal",
+//         helpText: "This is help page."
+//     });
+// });
 
 app.get('/weather', (req, res) => {
     if (!req.query.address) {
