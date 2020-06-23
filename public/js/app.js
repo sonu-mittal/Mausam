@@ -1,5 +1,3 @@
-console.log("Client side js file is loaded!");
-
 const weatherForm = document.querySelector('form');
 const search = document.querySelector('input');
 
@@ -63,7 +61,7 @@ weatherForm.addEventListener('submit', (e) => {
                 // msg4.style.backgroundColor = "lightblue";
                 // msg4.style.border = "2px solid black";
 
-                msg5.innerHTML = `<b>Current temp</b> <br/><br/>  ${data.forecast.currTemp}&#8451`
+                msg5.innerHTML = `<b>Current temp</b> <br/><br/> ${data.forecast.currTemp}&#8451`
                 msg5.style.backgroundColor = "lightblue";
                 msg5.style.border = "0.5px solid rgb(82, 185, 219)";
                 msg5.style.boxShadow = "8px 9px 10px 3px #898888";
