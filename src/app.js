@@ -23,25 +23,24 @@ app.use(express.static(dirPath));
 
 app.get('', (req, res) => {
     res.render('index', {
-        title: "Weather",
+        title: "Mausam",
         name: "Sonu Mittal"
     });
 });
 
-// app.get('/about', (req, res) => {
-//     res.render('about', {
-//         title: "About Me",
-//         name: "Sonu Mittal"
-//     });
-// });
+app.get('/about', (req, res) => {
+    res.render('about', {
+        title: "About",
+        name: "Sonu Mittal"
+    });
+});
 
-// app.get('/help', (req, res) => {
-//     res.render('help', {
-//         title: "Help",
-//         name: "Sonu Mittal",
-//         helpText: "This is help page."
-//     });
-// });
+app.get('/contact', (req, res) => {
+    res.render('contact', {
+        title: "Contact",
+        name: "Sonu Mittal"
+    });
+});
 
 app.get('/weather', (req, res) => {
     if (!req.query.address) {
@@ -75,11 +74,11 @@ app.get('/weather', (req, res) => {
     // });
 });
 
-app.get('/help/*', (req, res) => {
-    res.render('404', {
-        errorMsg: "Help article no found!!"
-    });
-});
+// app.get('/contact/*', (req, res) => {
+//     res.render('404', {
+//         errorMsg: "Help article not found!!"
+//     });
+// });
 
 app.get('/*', (req, res) => {
     res.render('404', {

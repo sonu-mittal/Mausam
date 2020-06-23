@@ -6,7 +6,14 @@
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="icon" href="/img/weather.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Tillana:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Weather App</title>
+    {{!-- <style>
+        p {
+            font-family: 'Tillana', cursive;
+        }
+    </style> --}}
 </head>
 
 <body>
@@ -14,7 +21,7 @@
         {{>header}}
         <p>Use this site to get weather information</p>
         <form>
-            <input placeholder="Location">
+            <input placeholder="Location" class="location">
             <button>Search</button>
         </form>
         <p id="msg1"></p>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="icon" href="/img/weather.png">
+    <link href="https://fonts.googleapis.com/css2?family=Tillana:wght@600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Help</title>
+</head>
+
+<body>
+    <div class="main-content">
+        {{>header}}
+        <p>This Web App is developed by Sonu Mittal<br> Please drop your message below.
+        </p>
+        <div id="form-div">
+            <form id="contact-form" method=""
+                action="mailto:sonumittal.mittal44@gmail.com?subject=Mail from weather app">
+                <input type="text" class="form-control" name="Full Name" placeholder="Full Name" required><br>
+                <input type="email" class="form-control" name="Email" placeholder="Email" required><br>
+                <textarea name="message" class="form-control" placeholder="Message" rows="4" required></textarea><br>
+                <input type="submit" value="Send" class="form-control-submit">
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+    {{>footer}}
+
+</body>
+
+</html>

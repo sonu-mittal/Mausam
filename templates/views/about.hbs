@@ -6,13 +6,32 @@
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="icon" href="/img/weather.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Tillana:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>About</title>
+    {{!-- <style>
+        p,
+        ul {
+            font-family: 'Tillana', cursive;
+        }
+    </style> --}}
 </head>
 
 <body>
     <div class="main-content">
         {{>header}}
         {{!-- <img class="portrait" src="/img/img.png" /> --}}
+        <div class="about-content">
+            <p>Weather application - Mausam is developed using HTML,CSS and JavaScript for Frontend and Nodejs for
+                backend
+            </p>
+            <p>It uses free version of two APIs :
+            <ul>
+                <li>OpenWeatherMap API for weather data</li>
+                <li>MapBox API for geocoding</li>
+            </ul>
+            </p>
+        </div>
     </div>
 
     {{>footer}}
