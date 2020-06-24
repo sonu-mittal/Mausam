@@ -151,6 +151,6 @@ button:hover {
 }
 @media screen and (max-width: 550px) {
   #form-div {
-    width: 40%;
+    width: 200px;
   }
 }
