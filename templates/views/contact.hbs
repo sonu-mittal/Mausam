@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="icon" href="/img/weather.png">
@@ -9,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Help</title>
+
 </head>
 
 <body>
@@ -17,18 +19,33 @@
         <p>This Web App is developed by Sonu Mittal<br> Please drop your message below.
         </p>
         <div id="form-div">
-            <form id="contact-form" method=""
-                action="mailto:sonumittal.mittal44@gmail.com?subject=Mail from weather app">
-                <input type="text" class="form-control" name="Full Name" placeholder="Full Name" required><br>
-                <input type="email" class="form-control" name="Email" placeholder="Email" required><br>
-                <textarea name="message" class="form-control" placeholder="Message" rows="4" required></textarea><br>
+            <form id="contact-form" method="" target="_top"
+                action="mailto:sonumittal.mittal44@gmail?subject=Mail%20from%20Weather%20App" enctype="text/plain">
+                <input type="text" class="form-control" name="Full Name" placeholder="Full Name" value="" required><br>
+                <input type="email" class="form-control" name="Email" placeholder="Email" value="" required><br>
+                <textarea name="message" class="form-control" placeholder="Message" rows="4" value=""
+                    required></textarea><br>
                 <input type="submit" value="Send" class="form-control-submit">
             </form>
+            <a class="mail" href="mailto:sonumittal.mittal44@gmail.com?Subject=Mail%20from%20Weather%20App"
+                target="_top" style="display: none;">Send Mail</a>
         </div>
     </div>
+    <script>
+        $('#contact-form').on('submit', function (e) {
 
+            var messageBody = '';
+            $.each($('#contact-form').serializeArray(), function (i, field) {
+                messageBody += field.name + ": " + field.value + '%0D%0A';
+            });
 
+            var hreflink = "mailto:sonumittal.mittal44@gmail.com?Subject=Mail%20from%20Weather%20App&body=" + messageBody;
+            $('.mail').attr("href", hreflink);
+            e.preventDefault();
+            $('.mail')[0].click()
 
+        });
+    </script>
 
 
     {{>footer}}
