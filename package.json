@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.3",
+    "express": "^4.19.2",
     "hbs": "^4.2.0",
     "request": "^2.88.2"
   },
